@@ -1,0 +1,1 @@
+/Users/hotmdev2/Documents/projects/telos/grow/grow.py wallet unlock && teclos set contract ed4444444444 ./ ./sample.transfer.wasm ./sample.transfer.abi
