@@ -15,7 +15,7 @@ namespace sample {
         ~transfer();
 
         [[eosio::action]]
-        void go(uint16_t r[]);
+        void go(name user, asset money);
 
         struct transfer_args {
           name from;
@@ -26,7 +26,7 @@ namespace sample {
         
         struct[[ eosio::table("user"), eosio::contract("sample.transfer") ]] user {
             name user_name;
-            uint32_t amount_tlos;
+            asset amount_tlos;
 
             uint64_t primary_key() const { return user_name.value; }
             EOSLIB_SERIALIZE(user, (user_name)(amount_tlos))
